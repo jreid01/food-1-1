@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FOOD-1-1</title>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUV4-YgcCcTMrO5kZH9Bpxf7O39hpY5HU&sensor=true&libraries=places" type="text/javascript"></script>
+		<script src="js/jquery/jquery.page-initialization.js"></script>
+		<script>
+$(document).ready(function() {
+	$().pageInitialize("page1");
+	$().pageInitialize("page2");
+})
+		</script>
+		<style>
+#map {
+	margin-left: 0.5em;
+	margin-top: 0.5em;
+	width: 95%;
+	height: 400px;
+	border: 1px solid #000;
+}
+		</style>
+	</head>
+	<body>
+		<!-- Begin Page -->
+		<section id="page1" data-role="page">
+			<header data-role="header"><h1>FOOD-1-1</h1></header>
+			<div class="content" data-role="content">
+				<form id="form-select-food">
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<legend>Choose A Food!</legend>
+							
+				         	<input type="radio" name="radio-choice-1" id="radio-choice-1" value="pizza" checked="checked" />
+				         	<label for="radio-choice-1">Pizza</label>
+	
+				         	<input type="radio" name="radio-choice-1" id="radio-choice-2" value="sushi"  />
+				         	<label for="radio-choice-2">Sushi</label>
+	
+				         	<input type="radio" name="radio-choice-1" id="radio-choice-3" value="barbecue"  />
+				         	<label for="radio-choice-3">Barbecue</label>
+	
+				         	<input type="radio" name="radio-choice-1" id="radio-choice-4" value="chinese"  />
+				         	<label for="radio-choice-4">Chinese</label>
+						</fieldset>
+					</div>
+					<button id="button-submit">Find Me Some Food!</button>
+				</form>
+			</div>
+			<footer data-role="footer"><h1>O'Reilly</h1></footer>
+		</section>
+		<!-- End Page -->
+		
+		<!-- Begin Page -->
+		<section id="page2" data-role="page" data-add-back-btn="true">
+			<header data-role="header"><h1>FOOD-1-1</h1></header>
+			<div class="content" data-role="content">
+				<div id="map"></div>
+			</div>
+			<footer data-role="footer"><h1>O'Reilly</h1></footer>
+		</section>
+		<!-- End Page -->
+	</body>
+</html>
